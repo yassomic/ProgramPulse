@@ -5,16 +5,18 @@
 <table>
   <thead>
     <tr>
-      <th>Bootcamp Name</th>
-      <th>Rating</th>
-      <th></th>
-      <th></th>
+      <th>Bootcamp</th>
+      <th><strong>Name</strong></th>
+      <th>Location</th>
+      <th>Focus</th>
+      <th>Length</th>
+      <th>Cost</th>
     </tr>
   </thead>
   <tbody>
     <% @schools.each do |school| %>
       <tr>
-        <td><%= school.picture_url %></td>
+        <td><img width='50' height='50' src= <%= school.picture_url %></></td>
         <td><%= school.name %></td>
         <td><%= school.location %></td>
         <td><%= school.focus %></td>
