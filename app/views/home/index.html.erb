@@ -21,7 +21,7 @@
         <td><%= school.location %></td>
         <td><%= school.focus %></td>
         <td><%= school.length %></td>
-        <td><%= school.cost %></td>
+        <td>$<%= number_with_delimiter(school.cost, :delimiter => ',') %></td>
       </tr>
     <% end %>
   </tbody>
