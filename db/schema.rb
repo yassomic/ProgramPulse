@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131207172722) do
+ActiveRecord::Schema.define(version: 20131207173944) do
+
+  create_table "schools", force: true do |t|
+    t.string   "picture_url"
+    t.string   "name"
+    t.string   "location"
+    t.string   "focus"
+    t.string   "length"
+    t.integer  "cost"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
