@@ -6,7 +6,7 @@
 
  <h1> Web Development Bootcamps </h1>
 
- <%= Rating.overall %>
+
 
 <table>
   <thead>
@@ -21,16 +21,18 @@
     </tr>
   </thead>
   <tbody>
+    <% @counter = 0 %>
     <% @schools.each do |school| %>
       <tr>
         <td><div style = "text-align: center"><img width='50' height='50' src= <%= school.picture_url %>/></div></td>
-        <td><div class="rateit" data-rateit-value='<%= rand(1..5) %>' data-rateit-ispreset="true" data-rateit-readonly="true"></div></td>
+        <td><div class="rateit" data-rateit-value='<%= school.average_rating(@counter) %>' data-rateit-ispreset="true" data-rateit-readonly="true"></div></td>
         <td><%= school.name %></td>
         <td><%= school.location %></td>
         <td><%= school.focus %></td>
         <td><%= school.length %></td>
         <td>$<%= number_with_delimiter(school.cost, :delimiter => ',') %></td>
       </tr>
+      <% @counter += 1 %>
     <% end %>
   </tbody>
 </table>

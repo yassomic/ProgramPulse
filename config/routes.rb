@@ -3,4 +3,5 @@ ProgramPulse::Application.routes.draw do
   devise_for :users, :controllers => {:registrations => "registrations"}
   resources :users
   resources :schools
+  # resources :ratings
 end
