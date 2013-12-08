@@ -3,15 +3,8 @@
 <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
 <h1> <%= @school.name %> </h1>
-<div><img src=<%= @school.picture_url %> /> </div>
+<div><img src=<%= @school.picture_url %> /> <img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= @school.coordinates %>&zoom=13&size=200x200&markers=color:blue%7Clabel:.%7C<%= @school.coordinates %>&sensor=false"></div>
 <div class="rateit" id="rating"></div>
-
-
-
-
-
-
-
 
 <script> $("#rating").on("click", function(){
 
