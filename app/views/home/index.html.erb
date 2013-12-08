@@ -10,6 +10,7 @@
   <thead>
     <tr>
       <th>Bootcamp</th>
+      <th>Rating</th>
       <th><strong>Name</strong></th>
       <th>Location</th>
       <th>Focus</th>
@@ -20,8 +21,8 @@
   <tbody>
     <% @schools.each do |school| %>
       <tr>
-        <td><img width='50' height='50' src= <%= school.picture_url %></></td>
-        <td><div class="rateit" data-rateit-value="2.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div></td>
+        <td><div style = "text-align: center"><img width='50' height='50' src= <%= school.picture_url %>/></div></td>
+        <td><div class="rateit" data-rateit-value='<%= rand(1..5) %>' data-rateit-ispreset="true" data-rateit-readonly="true"></div></td>
         <td><%= school.name %></td>
         <td><%= school.location %></td>
         <td><%= school.focus %></td>
