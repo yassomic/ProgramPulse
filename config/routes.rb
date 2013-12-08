@@ -4,4 +4,5 @@ ProgramPulse::Application.routes.draw do
   resources :users
   resources :schools
   # resources :ratings
+  post '/ratings' => 'ratings#create', as: 'rating'
 end

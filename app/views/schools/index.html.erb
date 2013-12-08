@@ -21,12 +21,12 @@
     </tr>
   </thead>
   <tbody>
-    <% @counter = 0 %>
+    <% @counter = 1 %>
     <% @schools.each do |school| %>
       <tr>
         <td><div style = "text-align: center"><img width='50' height='50' src= <%= school.picture_url %>/></div></td>
         <td><div class="rateit" data-rateit-value='<%= school.average_rating(@counter) %>' data-rateit-ispreset="true" data-rateit-readonly="true"></div></td>
-        <td><%= school.name %></td>
+        <td><%= link_to "#{school.name}", school %></td>
         <td><%= school.location %></td>
         <td><%= school.focus %></td>
         <td><%= school.length %></td>
