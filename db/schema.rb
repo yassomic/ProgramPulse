@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20131207232110910) do
     t.integer  "cost"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "coordinates"
   end
 
   create_table "users", force: true do |t|
