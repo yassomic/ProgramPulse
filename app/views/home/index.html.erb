@@ -1,4 +1,8 @@
+<head>
+<link rel="stylesheet" type="text/css" href="rateit.css">
 
+<script type="text/javascript" src="jquery.raty.js"></script>
+</head>
 
  <h1> Web Development Bootcamps </h1>
 
@@ -17,6 +21,7 @@
     <% @schools.each do |school| %>
       <tr>
         <td><img width='50' height='50' src= <%= school.picture_url %></></td>
+        <td><div class="rateit" data-rateit-value="2.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div></td>
         <td><%= school.name %></td>
         <td><%= school.location %></td>
         <td><%= school.focus %></td>
